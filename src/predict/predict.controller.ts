@@ -20,10 +20,10 @@ export class PredictController {
 
   @Get('/histories')
   async predictHistories() {
-    const data = []
+    const data = await this.predictService.predictHistories()
 
     return {
-      status: "Success",
+      status: "success",
       data
     }
   }
